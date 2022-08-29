@@ -21,7 +21,7 @@
  var longestCommonPrefix = function (strs) {
     let i = 0;
     const prefix = strs.reduce((acc, str) => {
-      while (strs.every((el) => el?.[i] === str?.[i])) {
+      while (str[i] && strs.every((el) => el[i] === str[i])) {
         acc.push(str[i]);
         i++;
       }
